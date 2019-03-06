@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import styles from './styles/styles.less';
 import Root from './components/Root';
 import './assets/images/ballIcon.ico';
