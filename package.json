@@ -19,9 +19,16 @@
     },
     "homepage": "https://github.com/cjordanball/Wheres-My-Music-Client#readme",
     "dependencies": {
+        "apollo-cache-inmemory": "^1.5.1",
+        "apollo-client": "^2.5.1",
+        "apollo-link-http": "^1.5.14",
+        "graphql": "^14.1.1",
+        "graphql-tag": "^2.10.1",
         "less": "^3.9.0",
         "react": "^16.8.3",
+        "react-apollo": "^2.5.2",
         "react-dom": "^16.8.3",
+        "react-router": "^4.3.1",
         "save": "^2.3.3"
     },
     "devDependencies": {
