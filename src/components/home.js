@@ -5,13 +5,14 @@ import LandingPage from './landingPage';
 
 
 const Home = (props) => {
-	console.log(props);
-	return (
+	const { data: { scores } } = props;
+	console.log(scores);
+	return scores ? (
 		<div>
 			<h3>Where&apos;s My Music?</h3>
 			<LandingPage />
 		</div>
-	);
+	) : '';
 };
 
 export default graphql(fetchScores)(Home);
