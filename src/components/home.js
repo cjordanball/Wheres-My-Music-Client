@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'react-apollo';
 import fetchScores from '../queries/fetchScores';
+import LandingPage from './landingPage';
 
 
 const Home = (props) => {
@@ -9,7 +10,7 @@ const Home = (props) => {
 	return scores ? (
 		<div>
 			<h3>Where&apos;s My Music?</h3>
-			<h4>{scores[0].name}</h4>
+			<LandingPage />
 		</div>
 	) : '';
 };
