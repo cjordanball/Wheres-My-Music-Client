@@ -5,6 +5,9 @@ export default gql`
 	scores {
 		name
 		composer
+		id
+		description
+		linkURL
 	}
 }
 `;
