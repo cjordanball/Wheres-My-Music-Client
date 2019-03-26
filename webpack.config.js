@@ -1,5 +1,5 @@
-const HtmlWebPackPlugin = require ('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	module: {
@@ -18,6 +18,20 @@ module.exports = {
 						loader: 'html-loader',
 						options: {
 							minimize: true
+						}
+					}
+				]
+			},
+			{
+				test: /\.css$/,
+				use: [
+					require.resolve('style-loader'),
+					{
+						loader: require.resolve('css-loader'),
+						options: {
+							importLoaders: 1,
+							modules: true,
+							localIdentName: '[name]__[local]__[has: base64:5]'
 						}
 					}
 				]
