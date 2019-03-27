@@ -1,8 +1,7 @@
 .container {
-	background: yellow;
-	height: 100%;
+	color: green;
 }
 
-.scoreHolder {
-	display: flex;
+.headline {
+	text-align: center;
 }

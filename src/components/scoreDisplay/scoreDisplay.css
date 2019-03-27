@@ -1,0 +1,8 @@
+.container {
+	background: purple;
+	height: 100%;
+}
+
+.scoreHolder {
+	display: flex;
+}

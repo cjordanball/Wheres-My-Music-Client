@@ -4,9 +4,11 @@ import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloProvider } from 'react-apollo';
-import HeadComponent from './common/headComponent/headComponent';
-import Home from './home/home';
+import HeadComponent from './common/headComponent';
+import Home from './home';
 import Auth from './auth/auth';
+import ScoreDisplay from './scoreDisplay';
+import styles from './root.css';
 
 const link = new HttpLink({ uri: 'http://localhost:3600/graphql' });
 
@@ -18,10 +20,11 @@ const client = new ApolloClient({
 const Root = () => (
 	<ApolloProvider client={client}>
 		<BrowserRouter>
-			<div>
+			<div className={styles.container}>
 				<HeadComponent />
 				<Route path="/" exact component={Home} />
 				<Route path="/auth" component={Auth} />
+				<Route path="/scores" component={ScoreDisplay} />
 			</div>
 		</BrowserRouter>
 	</ApolloProvider>
