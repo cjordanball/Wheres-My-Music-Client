@@ -21,9 +21,7 @@ const ScoreDisplay = (props) => {
 	}
 	return scores ? (
 		<div className={styles.container}>
-			<div className={styles.scoreHolder}>
-				{scoreList}
-			</div>
+			{scoreList}
 		</div>
 	) : '';
 };
