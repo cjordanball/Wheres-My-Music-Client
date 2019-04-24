@@ -1,7 +1,13 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = {
+	output: {
+		path: path.resolve(__dirname, 'build'),
+		publicPath: '/',
+		filename: 'bundle-main.js'
+	},
 	module: {
 		rules: [
 			{
@@ -75,5 +81,9 @@ module.exports = {
 			filename: './index.html',
 			favicon: 'src/assets/images/ballIcon.ico'
 		})
-	]
+	],
+	devServer: {
+		historyApiFallback: true,
+		port: 4000
+	}
 };
