@@ -8,6 +8,7 @@ import HeadComponent from './common/headComponent';
 import Home from './home';
 import Auth from './auth/auth';
 import ScoreDisplay from './scoreDisplay';
+import AddScore from './addScore';
 import styles from './root.css';
 
 const link = new HttpLink({ uri: 'http://localhost:3600/graphql' });
@@ -24,6 +25,7 @@ const Root = () => (
 				<HeadComponent />
 				<Route path="/" exact component={Home} />
 				<Route path="/auth" component={Auth} />
+				<Route path="/addScore" component={AddScore} />
 				<Route path="/scores" component={ScoreDisplay} />
 			</Fragment>
 		</BrowserRouter>

@@ -16,6 +16,9 @@ const HeadComponent = () => (
 					<NavLink to="/auth" exact activeClassName={styling.active}>Sign In</NavLink>
 				</div>
 				<div className={styling.link}>
+					<NavLink to="/addScore" exact activeClassName={styling.active}>Add Music</NavLink>
+				</div>
+				<div className={styling.link}>
 					<NavLink to="/scores" exact activeClassName={styling.active}>View Music</NavLink>
 				</div>
 			</nav>
