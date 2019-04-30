@@ -5,8 +5,7 @@ import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloProvider } from 'react-apollo';
 import HeadComponent from './common/headComponent';
-// import Home from './home';
-import Comp1 from './testerRoo/comp1';
+import Home from './home';
 import Auth from './auth/auth';
 import ScoreDisplay from './scoreDisplay';
 import styles from './root.css';
@@ -23,7 +22,7 @@ const Root = () => (
 		<BrowserRouter>
 			<Fragment>
 				<HeadComponent />
-				<Route path="/" exact component={Comp1} />
+				<Route path="/" exact component={Home} />
 				<Route path="/auth" component={Auth} />
 				<Route path="/scores" component={ScoreDisplay} />
 			</Fragment>
